@@ -5,10 +5,10 @@ public class Card implements Comparable<Card>{
     private String Name;
    
     public Card(int Value, String Suit, String Color, String Name){
-	Value = this.Value;
-	Suit = this.Suit;
-	Color = this.Color;
-	Name = this.Name;
+	this.Value = Value;
+	this.Suit = Suit;
+	this.Color = Color;
+	this.Name = Name;
     }
 
     public int getValue(){	
@@ -29,6 +29,10 @@ public class Card implements Comparable<Card>{
 
     public String readCard(){
 	return " "+ Value + " of " + Suit;
+    }
+
+    public String toString(){
+	return ""+Name+" of "+Suit;
     }
 
     public int compareTo(Card c){
